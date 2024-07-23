@@ -1,0 +1,434 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.ul{
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+a:hover{
+    opacity: 0.5;
+}
+
+body{
+    font-family: "YuGothic", "Hiragino Kaku Gothic Pro", "Meiryo", "Ms Gothic", sans-serif;
+}
+
+header{
+    width: 100%;
+    display: grid;
+    height: 70px;
+    box-shadow: 0px 10px 30px -20px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+
+header .container{
+    padding: 0 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    position: relative;
+    z-index: 10;
+}
+
+.header-logo .logo{
+    display: flex;
+
+}
+
+.logo img{
+    height: 20px;
+}
+
+.humburger-menu{
+    display: none;
+}
+
+.d-none{
+    display: none;
+}
+
+.header-lists{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content{
+    margin-right: 45px;
+}
+
+.header-item-button{
+    margin: 0;
+}
+
+
+.header-nav-item span{
+    display: block;
+    text-align: center;
+    font-weight: 700;
+}
+
+.header-nav-item span:first-child{
+    font-size: 12px;
+    font-family: "Lato", sans-serif;
+    line-height: 14.4px;
+}
+
+.header-nav-item span:last-child{
+    font-size: 10px;
+   }
+
+.header-item-button a{
+    background-color:#f79214;
+    align-items: center;
+    border: none;
+    border-radius: 100vh;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 700;
+    height: 64px;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    height: 40px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.first-view{
+    width: 100%;
+    height: 739px;
+    position: relative;
+}
+
+.left-rectangle{
+    position: absolute;
+    top: -70px;
+    left: 0;
+}
+
+.oval{
+    position: absolute;
+    top: 84px;
+    left: -70px;
+}
+
+.right-rectangle{
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+}
+
+.main-pic{
+    position: absolute;
+    top: -70px;
+    right: 0;
+    width: 775px;
+}
+
+.mobile-pic{
+    display: none;
+}
+
+.first-view .container{
+    position: relative;
+    max-width: 1040px;
+    padding-top: 219px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.text-pic{
+    display: block;
+    position: absolute;
+    top: -105px;
+    right: -150px;
+}
+
+.area-first-view-text{
+    position: relative;
+    width: fit-content;
+}
+
+.main-text{
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    display: block;
+    font-family: "Lato", sans-serif;
+}
+
+.first-view-item-bottom{
+    color: white;
+    background-color: #f79214;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 100vh;
+    font-size: 16px;
+    font-weight: 700;
+    height: 64px;
+    box-sizing: border-box;
+    border: none;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.note{
+    font-size: 12px;
+    color: #333;
+    line-height: 16px;
+}
+
+.area-bottom-ad{
+    position: fixed;
+    bottom: 0;
+    right: 4px;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.bottom-ad:hover{
+    opacity: 1;
+}
+
+.bottom-ad img{
+    max-width: 375px;
+    vertical-align: top;
+}
+
+
+
+
+
+@media screen and (max-width: 600px){
+    header{
+        padding: 15px 0;
+        background-color: white;
+        position: fixed;
+        z-index: 10;
+    }
+
+    header .container{
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    header .logo img{
+        display: block;
+        height: 16px;
+    }
+
+    .humburger-menu-icon{
+        position: absolute;
+        top: 0;
+        right: 15px;
+        bottom: 0;
+        z-index: 100;
+    }
+    
+    .menu-btn {
+        display: flex;
+        height: 100%;
+        width: 24px;
+        background-color: white;
+        justify-content: center;
+    }
+    
+    .menu-btn span {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        border-radius: 3px; 
+        background-color: gray;
+        position: absolute;
+        transition: .3s all;
+        top: 30%;
+    }
+    
+    .menu-btn span:nth-child(2) {
+        top: 50%;
+    }
+    .menu-btn span:nth-child(3) {
+        top: 70%;
+    }
+    
+    #menu-btn-check:checked ~ .humburger-menu-icon> .menu-btn span:nth-child(1) {
+        top: 50%;
+        transform: rotate(45deg);
+    }
+    #menu-btn-check:checked ~ .humburger-menu-icon> .menu-btn span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(1cm);
+    }
+    
+    #menu-btn-check:checked ~ .humburger-menu-icon> .menu-btn span:nth-child(3) {
+        top: 50%;
+        transform: rotate(-45deg);
+    }
+    
+    .menu-content {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 70px;
+        left: 100%;
+        z-index: 1;
+        background-color:rgba(0, 0, 0, 0.8);
+        transition: .5s all;
+        padding-top: 20px;
+    }
+ 
+    .menu-content .header-lists{
+        display: block;
+    }
+
+    .header-lists li{
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .header-nav-item{
+        display: block;
+        color: white;
+        padding: 20px 0;
+        text-decoration: none;
+        width: 100%;
+        z-index: 120;
+        letter-spacing: 5px;
+    }
+
+    .header-nav-item span{
+        width: 100%;
+    }
+
+    .header-nav-item span:first-child{
+        font-size: 16px;
+        letter-spacing: 5px;
+    }
+    
+    .header-nav-item span:last-child{
+        margin-top: 10px;
+        letter-spacing: 2px;
+        font-size: 12px;
+        color:#f79214;
+    }
+
+    .header-item-button {
+        margin-top: 20px !important;
+        box-sizing: border-box;
+    }
+
+    .header-item-button a{
+        font-size: 16px;
+        margin: 0 auto;
+        height: 60px;
+        width: 250px;
+    }
+
+    #menu-btn-check:checked ~ .menu-content{
+        left: 0;
+    }
+    
+    .first-view .container{
+        padding: 0 16px 20px;
+        top: 55px;
+    }
+
+    .left-rectangle{
+        display: none;
+    }
+
+    .oval{
+        display: none;
+    }
+
+    .right-rectangle{
+        display: none;
+    }
+
+    .main-pic{
+        display: none;
+    }
+
+    .mobile-pic{
+        display: block;
+        width: 100%;
+        position: relative;
+        top: 55px;
+        z-index: -1;
+        margin-bottom: 7px;
+    }
+
+    .text-pic{
+        height: 102px;
+        width: 102px;
+        top: -20px;
+        right: -85px;
+    }
+
+    .main-text{
+        font-size: 22px;
+        line-height: 36px;
+        width: fit-content;
+        position: relative;
+        display: block;
+    }
+    
+    .note{
+        text-align: left;
+    }
+
+    .area-bottom-ad{
+        width: 100%;
+        text-align: center;
+        right: 0;
+        background-color: #F4F5F7;
+        z-index: 2;
+        height: 114px;
+    }
+
+    .bottom-ad{
+        width: 100%;
+        height: 110.87px;
+    }
+
+    .ad-pic{
+        width: 100%;
+    }
+
+    .bottom-ad img{
+        max-width: unset;
+        width: 100%;
+        margin-top: 8px;
+
+    }
+}
